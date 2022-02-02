@@ -226,9 +226,9 @@ func (c *smtpClient) mail(from string, extArgs ...map[string]string) error {
 		if _, ok := c.ext["8BITMIME"]; ok {
 			cmdStr += " BODY=8BITMIME"
 		}
-		if _, ok := c.ext["SMTPUTF8"]; ok {
-			cmdStr += " SMTPUTF8"
-		}
+		// if _, ok := c.ext["SMTPUTF8"]; ok {
+		// 	cmdStr += " SMTPUTF8"
+		// }
 		if _, ok := c.ext["SIZE"]; ok {
 			if extMap["SIZE"] != "" {
 				cmdStr += " SIZE=%s"
