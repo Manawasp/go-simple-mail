@@ -193,7 +193,7 @@ func main() {
 	// add inline
 	email.Attach(&mail.File{FilePath: "/path/to/image.png", Name:"Gopher.png", Inline: true})
 
-	// you can add dkim signature to the email. 
+	// you can add dkim signature to the email.
 	// to add dkim, you need a private key already created one.
 	if privateKey != "" {
 		options := dkim.NewSigOptions()
